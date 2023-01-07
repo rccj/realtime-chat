@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
+
+const App = React.lazy(() => import('./App'));
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <div>error</div>,
   },
   {
     path: '/other',
