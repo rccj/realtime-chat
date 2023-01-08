@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 
-const App = React.lazy(() => import('./App'));
+const App = React.lazy(() => import('@/App'));
+const Home = React.lazy(() => import('@/Home'));
+const ChatRoom = React.lazy(() => import('@/ChatRoom'));
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <ChatRoom />,
     errorElement: <div>error</div>,
   },
   {
