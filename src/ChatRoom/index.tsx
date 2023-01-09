@@ -1,29 +1,29 @@
 const ChatRoom = () => {
   return (
-    <div className="h-screen w-screen flex items-center justify-center">
-      <div className="flex h-screen antialiased text-gray-800">
-        <div className="flex flex-row h-full w-full overflow-x-hidden">
-          <div className="flex flex-col flex-auto h-full p-6">
-            <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4">
-              <div className="flex flex-col h-full overflow-x-auto mb-4">
-                <div className="flex flex-col h-full">
+    <div className="flex h-screen w-screen items-center justify-center">
+      <div className="flex h-screen text-gray-800 antialiased">
+        <div className="flex h-full w-full flex-row overflow-x-hidden">
+          <div className="flex h-full flex-auto flex-col p-6">
+            <div className="flex h-full flex-auto flex-shrink-0 flex-col rounded-2xl bg-gray-100 p-4">
+              <div className="mb-4 flex h-full flex-col overflow-x-auto">
+                <div className="flex h-full flex-col">
                   <div className="grid grid-cols-12 gap-y-2">
-                    <div className="col-start-1 col-end-8 p-3 rounded-lg">
+                    <div className="col-start-1 col-end-8 rounded-lg p-3">
                       <div className="flex flex-row items-center">
-                        <div className="flex items-center justify-center h-10 w-10 rounded-full bg-sky-200 flex-shrink-0">
+                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-sky-200">
                           A
                         </div>
-                        <div className="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+                        <div className="relative ml-3 rounded-xl bg-white py-2 px-4 text-sm shadow">
                           <div>Hey, How are you today?</div>
                         </div>
                       </div>
                     </div>
-                    <div className="col-start-6 col-end-13 p-3 rounded-lg">
-                      <div className="flex items-center justify-start flex-row-reverse">
-                        <div className="flex items-center justify-center h-10 w-10 rounded-full bg-sky-600 flex-shrink-0">
+                    <div className="col-start-6 col-end-13 rounded-lg p-3">
+                      <div className="flex flex-row-reverse items-center justify-start">
+                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-sky-600">
                           R
                         </div>
-                        <div className="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl">
+                        <div className="relative mr-3 rounded-xl bg-indigo-100 py-2 px-4 text-sm shadow">
                           <div>{`I'm ok what about you?`}</div>
                         </div>
                       </div>
@@ -31,14 +31,14 @@ const ChatRoom = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-row items-center h-10 rounded-xl w-full">
-                <input className="flex flex-row items-center h-10 rounded-xl bg-white w-full px-4 focus:border-white"></input>
+              <div className="flex h-10 w-full flex-row items-center rounded-xl">
+                <input className="flex h-10 w-full flex-row items-center rounded-xl bg-white px-4 focus:border-white"></input>
                 <div className="ml-4">
-                  <button className="flex items-center justify-center bg-sky-600 hover:bg-sky-700 rounded-xl text-white px-4 py-1 flex-shrink-0">
+                  <button className="flex flex-shrink-0 items-center justify-center rounded-xl bg-sky-600 px-4 py-1 text-white hover:bg-sky-700">
                     <span>Send</span>
                     <span className="ml-2">
                       <svg
-                        className="w-4 h-4 transform rotate-45 -mt-px"
+                        className="-mt-px h-4 w-4 rotate-45 transform"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
