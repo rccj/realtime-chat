@@ -1,3 +1,5 @@
+import ChatMessage, { PositionEnum } from '@/ChatRoom/ChatMessage';
+
 const ChatRoom = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
@@ -8,26 +10,16 @@ const ChatRoom = () => {
               <div className="mb-4 flex h-full flex-col overflow-x-auto">
                 <div className="flex h-full flex-col">
                   <div className="grid grid-cols-12 gap-y-2">
-                    <div className="col-start-1 col-end-8 rounded-lg p-3">
-                      <div className="flex flex-row items-center">
-                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-sky-200">
-                          A
-                        </div>
-                        <div className="relative ml-3 rounded-xl bg-white py-2 px-4 text-sm shadow">
-                          <div>Hey, How are you today?</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-start-6 col-end-13 rounded-lg p-3">
-                      <div className="flex flex-row-reverse items-center justify-start">
-                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-sky-600">
-                          R
-                        </div>
-                        <div className="relative mr-3 rounded-xl bg-indigo-100 py-2 px-4 text-sm shadow">
-                          <div>{`I'm ok what about you?`}</div>
-                        </div>
-                      </div>
-                    </div>
+                    <ChatMessage
+                      position={PositionEnum.Left}
+                      content="Hey, How are you today?"
+                      userInfo={{ name: 'Other', avatar: '' }}
+                    />
+                    <ChatMessage
+                      position={PositionEnum.Right}
+                      content="I'm ok what about you?"
+                      userInfo={{ name: 'Roman', avatar: '' }}
+                    />
                   </div>
                 </div>
               </div>
