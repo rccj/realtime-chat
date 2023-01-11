@@ -1,6 +1,37 @@
+import { useState } from 'react';
 import ChatMessage, { PositionEnum } from '@/ChatRoom/ChatMessage';
 
+const defaultMessageInfos = [
+  {
+    id: 1,
+    position: PositionEnum.Left,
+    content: 'Hey, How are you today?',
+    userInfo: { name: 'Other', avatar: '' },
+  },
+  {
+    id: 2,
+    position: PositionEnum.Right,
+    content: "I'm ok what about you?",
+    userInfo: { name: 'Roman', avatar: '' },
+  },
+];
+
 const ChatRoom = () => {
+  const [messageInfos, setMessageInfos] = useState(defaultMessageInfos);
+
+  const sendMessage = () => {
+    const rondomNumber = Math.floor(Math.random() * 100);
+    setMessageInfos([
+      ...messageInfos,
+      {
+        id: rondomNumber,
+        position: PositionEnum.Right,
+        content: "I'm ok what about you?",
+        userInfo: { name: 'Roman', avatar: '' },
+      },
+    ]);
+  };
+
   return (
     <div className="flex h-screen w-screen items-center justify-center">
       <div className="flex h-screen text-gray-800 antialiased">
@@ -10,23 +41,24 @@ const ChatRoom = () => {
               <div className="mb-4 flex h-full flex-col overflow-x-auto">
                 <div className="flex h-full flex-col">
                   <div className="grid grid-cols-12 gap-y-2">
-                    <ChatMessage
-                      position={PositionEnum.Left}
-                      content="Hey, How are you today?"
-                      userInfo={{ name: 'Other', avatar: '' }}
-                    />
-                    <ChatMessage
-                      position={PositionEnum.Right}
-                      content="I'm ok what about you?"
-                      userInfo={{ name: 'Roman', avatar: '' }}
-                    />
+                    {messageInfos.map((item) => (
+                      <ChatMessage
+                        key={item.id}
+                        position={item.position}
+                        content={item.content}
+                        userInfo={item.userInfo}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
               <div className="flex h-10 w-full flex-row items-center rounded-xl">
                 <input className="flex h-10 w-full flex-row items-center rounded-xl bg-white px-4 focus:border-white"></input>
                 <div className="ml-4">
-                  <button className="flex flex-shrink-0 items-center justify-center rounded-xl bg-sky-600 px-4 py-1 text-white hover:bg-sky-700">
+                  <button
+                    onClick={sendMessage}
+                    className="flex flex-shrink-0 items-center justify-center rounded-xl bg-sky-600 px-4 py-1 text-white hover:bg-sky-700"
+                  >
                     <span>Send</span>
                     <span className="ml-2">
                       <svg
