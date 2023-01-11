@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import ChatMessage, { PositionEnum } from '@/ChatRoom/ChatMessage';
 
 const defaultMessageInfos = [
@@ -18,18 +18,25 @@ const defaultMessageInfos = [
 
 const ChatRoom = () => {
   const [messageInfos, setMessageInfos] = useState(defaultMessageInfos);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
-  const sendMessage = () => {
-    const rondomNumber = Math.floor(Math.random() * 100);
-    setMessageInfos([
+  const scrolltoBottom = () => {
+    const scrollHeight = scrollRef.current?.scrollHeight ?? 0;
+    scrollRef.current?.scrollTo(0, scrollHeight);
+  };
+
+  const sendMessage = async () => {
+    const rondomNumber = window.crypto.getRandomValues(new Uint32Array(1))[0];
+    await setMessageInfos([
       ...messageInfos,
       {
         id: rondomNumber,
         position: PositionEnum.Right,
-        content: "I'm ok what about you?",
+        content: "I'm ok what about you? ",
         userInfo: { name: 'Roman', avatar: '' },
       },
     ]);
+    scrolltoBottom();
   };
 
   return (
@@ -38,7 +45,10 @@ const ChatRoom = () => {
         <div className="flex h-full w-full flex-row overflow-x-hidden">
           <div className="flex h-full flex-auto flex-col p-6">
             <div className="flex h-full flex-auto flex-shrink-0 flex-col rounded-2xl bg-gray-100 p-4">
-              <div className="mb-4 flex h-full flex-col overflow-x-auto">
+              <div
+                ref={scrollRef}
+                className="mb-4 flex h-full flex-col overflow-x-auto "
+              >
                 <div className="flex h-full flex-col">
                   <div className="grid grid-cols-12 gap-y-2">
                     {messageInfos.map((item) => (
