@@ -3,13 +3,13 @@ import ChatMessage, { PositionEnum } from '@/ChatRoom/ChatMessage';
 
 const defaultMessageInfos = [
   {
-    id: 1,
+    id: '1',
     position: PositionEnum.Left,
     content: 'Hey, How are you today?',
     userInfo: { name: 'Other', avatar: '' },
   },
   {
-    id: 2,
+    id: '2',
     position: PositionEnum.Right,
     content: "I'm ok what about you?",
     userInfo: { name: 'Roman', avatar: '' },
@@ -26,7 +26,7 @@ const ChatRoom = () => {
   };
 
   const sendMessage = async () => {
-    const rondomNumber = window.crypto.getRandomValues(new Uint32Array(1))[0];
+    const rondomNumber = window.crypto.randomUUID();
     await setMessageInfos([
       ...messageInfos,
       {
