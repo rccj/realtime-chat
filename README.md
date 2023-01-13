@@ -3,6 +3,8 @@
 ## change log
 
 ### 2023-01-09
+- Add "typescript.tsdk": "./node_modules/typescript/lib"
+### 2023-01-09
 - Add prettier-plugin-tailwindcss
 ### 2023-01-08
 - Absolute import path
