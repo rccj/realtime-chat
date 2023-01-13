@@ -11,13 +11,13 @@
     "lint:fix": "eslint --fix ."
   },
   "dependencies": {
-    "prettier-plugin-tailwindcss": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
     "vite-tsconfig-paths": "^4.0.3"
   },
   "devDependencies": {
+    "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@typescript-eslint/eslint-plugin": "^5.47.1",
@@ -32,6 +32,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "postcss": "^8.4.20",
     "prettier": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.2.1",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.3",
     "vite": "^4.0.0"
