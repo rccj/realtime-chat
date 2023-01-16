@@ -1,8 +1,9 @@
 # Realtime Chat
 
 ## change log
-
-### 2023-01-09
+### 2023-01-16
+- init i18n
+### 2023-01-13
 - Add "typescript.tsdk": "./node_modules/typescript/lib"
 ### 2023-01-09
 - Add prettier-plugin-tailwindcss
