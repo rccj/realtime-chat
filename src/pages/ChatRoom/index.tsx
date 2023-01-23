@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import ChatMessage, { PositionEnum } from '@/ChatRoom/ChatMessage';
+import ChatMessage, { PositionEnum } from '@/pages/ChatRoom/ChatMessage';
 
 const defaultMessageInfos = [
   {

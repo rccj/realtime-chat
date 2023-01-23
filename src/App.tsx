@@ -5,8 +5,8 @@ import { useTranslation, initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
 
-const ChatRoom = React.lazy(() => import('@/ChatRoom'));
-const Login = React.lazy(() => import('@/Login'));
+const ChatRoom = React.lazy(() => import('@/pages/ChatRoom'));
+const Login = React.lazy(() => import('@/pages/Login'));
 
 i18n
   .use(Backend)
