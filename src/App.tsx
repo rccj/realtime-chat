@@ -38,7 +38,7 @@ function App() {
     // <div>
     //   <button onClick={() => i18n.changeLanguage('en')}>En</button>
     //   <button onClick={() => i18n.changeLanguage('zh-tw')}>zh-tw</button>
-    //   <h2>{t('welcome')}</h2>
+    //   <h2>{t('home.welcome')}</h2>
     // </div>
     <RouterProvider router={router} />
   );
