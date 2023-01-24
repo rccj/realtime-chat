@@ -5,29 +5,14 @@ const Login = () => {
         <h1 className="mb-5 text-center text-2xl font-bold">Your Logo</h1>
         <div className="w-full divide-y divide-gray-200 rounded-lg bg-white shadow">
           <div className="px-5 py-7">
-            <label
-              htmlFor="e-mail"
-              className="block pb-1 text-sm font-semibold text-gray-600"
-            >
+            <label htmlFor="e-mail" className="block pb-1 text-sm font-semibold text-gray-600">
               E-mail
             </label>
-            <input
-              id="e-mail"
-              type="text"
-              className="mt-1 mb-5 w-full rounded-lg border px-3 py-2 text-sm"
-            />
-            <label
-              id="password"
-              htmlFor="2"
-              className="block pb-1 text-sm font-semibold text-gray-600"
-            >
+            <input id="e-mail" type="text" className="mt-1 mb-5 w-full rounded-lg border px-3 py-2 text-sm" />
+            <label id="password" htmlFor="2" className="block pb-1 text-sm font-semibold text-gray-600">
               Password
             </label>
-            <input
-              id="password"
-              type="text"
-              className="mt-1 mb-5 w-full rounded-lg border px-3 py-2 text-sm"
-            />
+            <input id="password" type="text" className="mt-1 mb-5 w-full rounded-lg border px-3 py-2 text-sm" />
             <button
               type="button"
               className="inline-block w-full rounded-lg bg-blue-500 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition duration-200 hover:bg-blue-600 hover:shadow-md focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
@@ -40,12 +25,7 @@ const Login = () => {
                 stroke="currentColor"
                 className="inline-block h-4 w-4"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
           </div>
@@ -125,12 +105,7 @@ const Login = () => {
                   stroke="currentColor"
                   className="inline-block h-4 w-4 align-text-top"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
                 <span className="ml-1 inline-block">Back to your-app.com</span>
               </button>

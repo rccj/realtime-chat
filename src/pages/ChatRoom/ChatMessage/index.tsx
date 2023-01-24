@@ -12,24 +12,12 @@ interface IChatMessage {
   };
 }
 
-const ChatMessage = ({
-  position = PositionEnum.Left,
-  content,
-  userInfo,
-}: IChatMessage) => {
+const ChatMessage = ({ position = PositionEnum.Left, content, userInfo }: IChatMessage) => {
   const isLeft = position === PositionEnum.Left;
 
   return (
-    <div
-      className={` rounded-lg p-3 ${
-        isLeft ? 'col-start-1 col-end-8' : 'col-start-6 col-end-13 '
-      }`}
-    >
-      <div
-        className={`flex items-center ${
-          isLeft ? 'flex-row' : 'flex-row-reverse '
-        }`}
-      >
+    <div className={` rounded-lg p-3 ${isLeft ? 'col-start-1 col-end-8' : 'col-start-6 col-end-13 '}`}>
+      <div className={`flex items-center ${isLeft ? 'flex-row' : 'flex-row-reverse '}`}>
         <div className="mx-3 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-sky-200">
           {userInfo.name[0]}
         </div>
