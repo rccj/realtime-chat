@@ -6,4 +6,12 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   envDir: './env',
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://hex-escape-room.herokuapp.com/',
+        changeOrigin: true,
+      },
+    },
+  },
 });
