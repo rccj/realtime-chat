@@ -3,8 +3,8 @@ import useSignUp, { ISignUp } from '@/pages/Login/hooks/useSignUp';
 import { useForm } from 'react-hook-form';
 
 const Login = () => {
-  // https://hex-escape-room.herokuapp.com/api/user/signup
-  // https://hex-escape-room.herokuapp.com/api/user/signin
+  // https://todoo.5xcamp.us/users/sign_in
+  // https://todoo.5xcamp.us/users
 
   const {
     register,
@@ -23,8 +23,7 @@ const Login = () => {
     signUpTrigger({
       email: watch('email'),
       password: watch('password'),
-      // email: 'lovef2e@hexschool.com',
-      // password: '12345678',
+      nickname: watch('email'),
     });
   };
 
