@@ -7,11 +7,6 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   envDir: './env',
   server: {
-    proxy: {
-      '/api': {
-        target: 'https://hex-escape-room.herokuapp.com/',
-        changeOrigin: true,
-      },
-    },
+    open: true,
   },
 });
