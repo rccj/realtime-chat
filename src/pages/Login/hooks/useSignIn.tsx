@@ -7,10 +7,13 @@ export interface ISignIn {
 
 const useSignIn = () => {
   async function sendRequest(url: string, { arg }: { arg: ISignIn }) {
-    return fetch(url, { method: 'POST', body: JSON.stringify(arg) }).then((res) => res.json());
+    const user = {
+      user: arg,
+    };
+    return fetch(url, { method: 'POST', body: JSON.stringify(user) }).then((res) => res.json());
   }
 
-  const { trigger, isMutating, data, error } = useSWRMutation('api/user/signin', sendRequest);
+  const { trigger, isMutating, data, error } = useSWRMutation('https://todoo.5xcamp.us/users/sign_in', sendRequest);
 
   return {
     trigger,
