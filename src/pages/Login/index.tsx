@@ -16,7 +16,6 @@ const Login = () => {
   const onSubmit = (data: ISignUp) => console.log(data);
 
   const { trigger: signUpTrigger } = useSignUp();
-  //isMutating, data, error
   const { trigger: signInTrigger } = useSignIn();
 
   const signUp = () => {
@@ -24,6 +23,13 @@ const Login = () => {
       email: watch('email'),
       password: watch('password'),
       nickname: watch('email'),
+    });
+  };
+
+  const signIn = () => {
+    signInTrigger({
+      email: watch('email'),
+      password: watch('password'),
     });
   };
 
@@ -55,7 +61,8 @@ const Login = () => {
               />
               {/* {errors.password && <div>password 必填</div>} */}
               <button
-                type="submit"
+                type="button"
+                onClick={signIn}
                 className="w-full rounded-lg bg-blue-500 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition duration-200 hover:bg-blue-600 hover:shadow-md focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
               >
                 <span className="mr-2">Login</span>
