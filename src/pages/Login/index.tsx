@@ -3,9 +3,6 @@ import useSignUp, { ISignUp } from '@/pages/Login/hooks/useSignUp';
 import { useForm } from 'react-hook-form';
 
 const Login = () => {
-  // https://todoo.5xcamp.us/users/sign_in
-  // https://todoo.5xcamp.us/users
-
   const {
     register,
     handleSubmit,
