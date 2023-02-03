@@ -11,7 +11,11 @@ const useSignIn = () => {
     const user = {
       user: arg,
     };
-    return fetch(url, { method: 'POST', body: JSON.stringify(user) }).then((res) => res.json());
+    return fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(user),
+      headers: { 'content-type': 'application/json' },
+    }).then((res) => res.json());
   }
 
   const { trigger, isMutating, data, error } = useSWRMutation('https://todoo.5xcamp.us/users', sendRequest);

@@ -82,7 +82,7 @@ const Login = () => {
                 type="button"
                 className="w-full rounded-lg border border-gray-200 py-2.5 text-center text-sm font-normal text-gray-500 shadow-sm transition duration-200 hover:shadow-md"
               >
-                SignIn
+                SignUp
               </button>
               <button
                 type="button"
