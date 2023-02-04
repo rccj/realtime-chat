@@ -30,6 +30,8 @@ const Login = () => {
     });
   };
 
+  // TODO: 表格錯誤驗證
+
   return (
     <div className="flex min-h-screen flex-col justify-center bg-gray-100 sm:py-12">
       <div className="xs:p-0 mx-auto p-10 md:w-full md:max-w-md">
@@ -46,7 +48,6 @@ const Login = () => {
                 type="text"
                 className="mt-1 mb-5 w-full rounded-lg border px-3 py-2 text-sm"
               />
-              {/* {errors.email && <div className="text-gray-600">email 必填</div>} */}
               <label id="password" htmlFor="password" className="block pb-1 text-sm font-semibold text-gray-600">
                 Password
               </label>
@@ -56,7 +57,6 @@ const Login = () => {
                 type="password"
                 className="mt-1 mb-5 w-full rounded-lg border px-3 py-2 text-sm"
               />
-              {/* {errors.password && <div>password 必填</div>} */}
               <button
                 type="button"
                 onClick={signIn}
@@ -84,15 +84,15 @@ const Login = () => {
               >
                 SignUp
               </button>
-              <button
+              {/* <button
                 type="button"
                 className="w-full rounded-lg border border-gray-200 py-2.5 text-center text-sm font-normal text-gray-500 shadow-sm transition duration-200 hover:shadow-md"
               >
                 Google
-              </button>
+              </button> */}
             </div>
           </div>
-          <div className="py-5">
+          {/* <div className="py-5">
             <div className="grid grid-cols-2 gap-1">
               <div className="whitespace-nowrap text-center sm:text-left">
                 <button className="mx-5 cursor-pointer rounded-lg px-5 py-4 text-sm font-normal text-gray-500 ring-inset transition duration-200 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50">
@@ -133,11 +133,11 @@ const Login = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="py-5">
           <div className="grid grid-cols-2 gap-1">
-            <div className="whitespace-nowrap text-center sm:text-left">
+            {/* <div className="whitespace-nowrap text-center sm:text-left">
               <button className="mx-5 cursor-pointer rounded-lg px-5 py-4 text-sm font-normal text-gray-500 ring-inset transition duration-200 hover:bg-gray-200 focus:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ const Login = () => {
                 </svg>
                 <span className="ml-1">Back to your-app.com</span>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
