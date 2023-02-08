@@ -57,11 +57,7 @@ const Login = () => {
                 type="password"
                 className="mt-1 mb-5 w-full rounded-lg border px-3 py-2 text-sm"
               />
-              <button
-                type="button"
-                onClick={signIn}
-                className="w-full rounded-lg bg-blue-500 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition duration-200 hover:bg-blue-600 hover:shadow-md focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
-              >
+              <Button type="primary" onClick={signIn}>
                 <span className="mr-2">Login</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -72,18 +68,14 @@ const Login = () => {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </button>
+              </Button>
             </form>
           </div>
           <div className="p-5">
             <div className="grid grid-cols-3 gap-1">
-              <button
-                onClick={signUp}
-                type="button"
-                className="w-full rounded-lg border border-gray-200 py-2.5 text-center text-sm font-normal text-gray-500 shadow-sm transition duration-200 hover:shadow-md"
-              >
+              <Button onClick={signUp} type="default">
                 SignUp
-              </button>
+              </Button>
               {/* <button
                 type="button"
                 className="w-full rounded-lg border border-gray-200 py-2.5 text-center text-sm font-normal text-gray-500 shadow-sm transition duration-200 hover:shadow-md"
