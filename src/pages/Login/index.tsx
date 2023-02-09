@@ -1,6 +1,7 @@
 import useSignIn, { ISignIn } from '@/pages/Login/hooks/useSignIn';
 import useSignUp, { ISignUp } from '@/pages/Login/hooks/useSignUp';
 import { useForm } from 'react-hook-form';
+import Button from '@/components/Button';
 
 const Login = () => {
   const {
