@@ -22,6 +22,15 @@ i18n
 const router = createBrowserRouter([
   {
     path: '/',
+    element: (
+      <div>
+        <h2>Home</h2>
+      </div>
+    ),
+    errorElement: <div>error</div>,
+  },
+  {
+    path: '/chatroom',
     element: <ChatRoom />,
     errorElement: <div>error</div>,
   },
