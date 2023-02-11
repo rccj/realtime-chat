@@ -6,6 +6,8 @@ export interface ISignUp {
   nickname: string;
 }
 
+const apiUrl = 'https://todoo.5xcamp.us/users';
+
 const useSignIn = () => {
   async function sendRequest(url: string, { arg }: { arg: ISignUp }) {
     const user = {
@@ -18,7 +20,7 @@ const useSignIn = () => {
     }).then((res) => res.json());
   }
 
-  const { trigger, isMutating, data, error } = useSWRMutation('https://todoo.5xcamp.us/users', sendRequest);
+  const { trigger, isMutating, data, error } = useSWRMutation(apiUrl, sendRequest);
 
   return {
     trigger,
