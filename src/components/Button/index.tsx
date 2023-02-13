@@ -7,7 +7,7 @@ interface IButton extends InputHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-const Button = ({ type, isLoading, isDisabled, className, children, ...rest }: PropsWithChildren<IButton>) => {
+const Button = ({ type, isLoading, isDisabled, className, children, onClick, ...rest }: PropsWithChildren<IButton>) => {
   let color = 'bg-gray-200';
 
   if (type === 'primary') {
@@ -21,6 +21,7 @@ const Button = ({ type, isLoading, isDisabled, className, children, ...rest }: P
   // hover:opacity-100
   return (
     <button
+      onClick={onClick}
       disabled={isDisabled}
       type="button"
       className={`w-full rounded-lg border border-gray-200 py-2.5 text-center text-sm font-normal opacity-90 shadow-sm transition transition-all duration-200 hover:opacity-100 hover:shadow-md focus:ring-4 focus:ring-opacity-50 ${color} ${className}`}
