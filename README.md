@@ -1,5 +1,6 @@
 # Realtime Chat
 
+<!--
 ## change log
 ### 2023-01-16
 - init i18n
@@ -17,4 +18,4 @@
 - Add Tailwind CSS
 ### 2023-01-03
 - Initialize the project by Vite、Typescript、SWR
-- Setting Prettier and Eslint
+- Setting Prettier and Eslint -->
