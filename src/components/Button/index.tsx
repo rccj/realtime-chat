@@ -17,8 +17,7 @@ const Button = ({ type, isLoading, isDisabled, className, children, onClick, ...
   } else if (type === 'default') {
     color = 'text-gray-500 focus:ring-gray-400';
   }
-  // transition-all opacity-90
-  // hover:opacity-100
+
   return (
     <button
       onClick={onClick}
