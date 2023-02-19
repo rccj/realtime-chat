@@ -2,6 +2,7 @@ import useSignIn, { ISignIn } from '@/pages/Login/hooks/useSignIn';
 import useSignUp, { ISignUp } from '@/pages/Login/hooks/useSignUp';
 import { useForm } from 'react-hook-form';
 import Button from '@/components/Button';
+import IconMdiArrowRightThin from '~icons/mdi/arrow-right-thin';
 
 const Login = () => {
   const {
@@ -59,16 +60,10 @@ const Login = () => {
                 className="mt-1 mb-5 w-full rounded-lg border px-3 py-2 text-sm"
               />
               <Button type="primary" onClick={signIn}>
-                <span className="mr-2">Login</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="inline-block h-4 w-4"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <div className="flex items-center justify-center">
+                  <span className="mr-2">Login</span>
+                  <IconMdiArrowRightThin />
+                </div>
               </Button>
             </form>
           </div>
